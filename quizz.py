@@ -26,30 +26,6 @@ class Quizz:
                 break
         return attempts
 
-'''
-def ask_user(q:str,r:str):
-    user_input = input(q)    
-    if user_input.lower() == r.lower():
-        return 0
-    else:
-        #print(r.lower())
-        return -1
-
-def start_quizz(quizz:dict, attempts:int=3):
-    for q in quizz.keys():
-        r = quizz[q]
-        q_result = ask_user(q,r)
-        print(f"q_result:{q_result}")
-        attempts += q_result
-        print(f"Sorry, you have {attempts} chances left")
-        while (attempts>0 and q_result<0) :
-            q_result = ask_user(q,r)
-            attempts += q_result
-            print(f"Sorry, you have {attempts} chances left")
-        if attempts == 0:
-            break
-    return attempts
-'''
 def main():
     MAX_ATTEMPTS = 3
     quizz = { "Question 1: Combien de fois la France a gagné la coupe du monde ? ":"2", 
